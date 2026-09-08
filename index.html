@@ -183,11 +183,11 @@
 
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="num">5</div>
+      <div class="num">7</div>
       <div class="label">今日完成事项</div>
     </div>
     <div class="stat-card">
-      <div class="num" style="color: #f59e0b;">2</div>
+      <div class="num" style="color: #f59e0b;">1</div>
       <div class="label">推进中 · 待拍板</div>
     </div>
     <div class="stat-card">
@@ -235,9 +235,9 @@
           <span class="tag tag-green">网页</span>
         </div>
         <ul class="task-desc">
-          <li>注册 GitHub 账号（wangqiwei2026，163 邮箱），创建 Pages 仓库并发布 9-7 日报，永久网址实测上线：<b>https://wangqiwei2026.github.io</b>（200 验证通过）。</li>
-          <li>效果：电脑关机也能打开、转发到微信点开直看、不跳转不登录、永久有效。</li>
-          <li>账号信息已存档 D:\重要文件\GitHub账号信息.txt，并发送至本人 132 邮箱备查。</li>
+          <li>注册 GitHub 账号（wangqiwei2026，163 邮箱），创建 Pages 仓库并发布日报，永久网址实测上线：<b>https://wangqiwei2026.github.io</b>（200 验证通过）。</li>
+          <li>效果：电脑关机也能打开、转发后点开直看、不跳转不登录、永久有效。</li>
+          <li>9-7、9-8 两日日报均已挂载永久链接（daily-2026-09-07.html / daily-2026-09-08.html），首页恒为最新一天；账号信息已存档 D:\重要文件\GitHub账号信息.txt。</li>
         </ul>
       </li>
       <li class="task-item">
@@ -249,6 +249,26 @@
           <li>确认日报网页按"隧道地址/daily-日期.html"格式发布——每份独立、不互相覆盖；9-7 日报已按此格式挂载并实测 200 可用。</li>
         </ul>
       </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>6. 今日（9-8）日报生成、发布与飞书发送</span>
+          <span class="tag tag-blue">日报</span>
+        </div>
+        <ul class="task-desc">
+          <li>生成 9-8 日报 HTML 版，按 daily-2026-09-08.html 格式挂载并同步到 GitHub 永久站（首页即最新），链接实测 200。</li>
+          <li>永久链接已发送飞书私聊；按当日确定口径，此后每日生成的日报默认发飞书。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>7. 手机打开日报链接受阻问题排查与解决</span>
+          <span class="tag tag-blue">日报</span>
+        </div>
+        <ul class="task-desc">
+          <li>现象：手机端点开链接弹出"即将打开飞书"拦截页、企微里打不开。逐项排查（隧道缓存残留、GitHub 网络可达性、桌面端直发等）后定位根因：从飞书"分享/转发"发出的链接会被飞书包一层 applink.feishu.cn 跳转皮，飞书外点开即弹拦截页——并非日报链接本身失效。</li>
+          <li>解决与验证：永久链接在电脑/手机浏览器实测正常打开（日报页 200）；正确用法为长按网址选"复制"再粘贴转发，勿用飞书"分享/转发"按钮。</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
@@ -257,16 +277,7 @@
     <ul class="task-list">
       <li class="task-item">
         <div class="task-header">
-          <span>1. 今日（9-8）日报生成与发送</span>
-          <span class="tag tag-blue">日报</span>
-        </div>
-        <ul class="task-desc">
-          <li>正在生成 9-8 日报网页版并按新格式发布链接、发送飞书（本条执行中）。</li>
-        </ul>
-      </li>
-      <li class="task-item">
-        <div class="task-header">
-          <span>2. 22MB 旧诊断文件清理</span>
+          <span>1. 22MB 旧诊断文件清理</span>
           <span class="tag tag-orange">系统</span>
         </div>
         <ul class="task-desc">
@@ -279,8 +290,8 @@
   <div class="section">
     <div class="section-title">三、明日计划</div>
     <ul class="bullet-list">
-      <li><b>1. 日报流程固化</b>：每日生成当日 HTML 日报 → 发布 daily-日期.html 网址链接 → 自动发飞书（今日确定：以后生成的日报都发飞书）。</li>
-      <li><b>2. GitHub 永久站同步</b>：将每日日报更新到永久网址 wangqiwei2026.github.io（保持"关机也能看"的固定入口）。</li>
+      <li><b>1. 日报流程每日执行</b>：每日生成当日 HTML 日报 → 发布 daily-日期.html 网址 → 自动发飞书私聊（今日已跑通首轮，此后每日照此执行）。</li>
+      <li><b>2. GitHub 永久站每日同步</b>：每日将最新日报同步到永久网址 wangqiwei2026.github.io（首页恒为最新，保持"关机也能看"的固定入口）。</li>
       <li><b>3. 积压文件清理</b>：确认后删除 22MB 旧诊断文件，释放空间。</li>
     </ul>
   </div>
