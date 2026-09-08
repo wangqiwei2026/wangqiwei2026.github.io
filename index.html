@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI 工作日报 · 2026-09-07 (周一)</title>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 16px 12px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+  }
+  .header {
+    border-bottom: 2px solid #eff6ff;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .company-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: var(--text-main);
+    font-weight: 800;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    background: #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .meta-item b { color: var(--text-main); }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 8px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 22px; font-weight: 800; color: var(--primary); }
+  .stat-card .label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+  }
+  .task-list { list-style: none; padding: 0; margin: 0; }
+  .task-item {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .task-header {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+  }
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .tag-blue { background: #dbeafe; color: #1e40af; }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-purple { background: #f3e8ff; color: #6b21a8; }
+  .tag-orange { background: #ffedd5; color: #9a3412; }
+  .task-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+    padding-left: 16px;
+  }
+  .task-desc li { margin-bottom: 4px; }
+  .bullet-list {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 14px 16px 14px 28px;
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+  }
+  .bullet-list li { margin-bottom: 6px; }
+  .bullet-list li:last-child { margin-bottom: 0; }
+  .footer {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  @media (max-width: 640px) {
+    body { padding: 10px 6px; }
+    .container { padding: 16px 12px; border-radius: 12px; }
+    h1 { font-size: 20px; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .stat-card .num { font-size: 18px; }
+    .stat-card .label { font-size: 9px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 4px; }
+    .task-header { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="company-badge">广州云埃科技有限公司 · 埃贝普销售团队</div>
+    <h1>工作日报 · 2026-09-07（周一）</h1>
+    <div class="meta-grid">
+      <div class="meta-item">汇报日期：<b>2026-09-07</b></div>
+      <div class="meta-item">汇报人：<b>王其伟</b>（Hermes 汇总当日执行记录）</div>
+      <div class="meta-item">AI 协同：<b>Hermes · DeepSeek</b></div>
+      <div class="meta-item">覆盖窗口：<b>3 个（桌面×2 + 飞书）</b></div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="num">8</div>
+      <div class="label">今日完成事项</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="color: #f59e0b;">2</div>
+      <div class="label">推进中 · 待拍板</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="color: #6b21a8;">3</div>
+      <div class="label">明日计划</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">一、今日完成事项</div>
+    <ul class="task-list">
+      <li class="task-item">
+        <div class="task-header">
+          <span>1. 日报"网址版"交付形态拍板落地</span>
+          <span class="tag tag-blue">日报</span>
+        </div>
+        <ul class="task-desc">
+          <li>对比同事两种发法（"文件"手机只能收、"网址"手机点开即看），确认今后日报统一走网址链接交付。</li>
+          <li>修复手机端打不开问题：长链接（含中文编码）在企微内被截断致 404，改用短链接直达首页方案。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>2. 公网发布通道搭建 + 企微直发验证</span>
+          <span class="tag tag-blue">日报</span>
+        </div>
+        <ul class="task-desc">
+          <li>本地网页服务 + Cloudflare 临时公网隧道部署完成，日报可发布成手机直接访问的网址。</li>
+          <li>链接经企业微信"文件传输助手"自动发送并验证可打开（与同事同机制）。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>3. 双品牌口径定稿：海外社媒推广要点改"埃贝普 + 莲奥"版</span>
+          <span class="tag tag-green">外贸</span>
+        </div>
+        <ul class="task-desc">
+          <li>确认双品牌关系：埃贝普＝对外公司名号（官网/邮件签名/主页），莲奥＝产品品牌（产品内容），文档按此口径重写。</li>
+          <li>生成《莲奥-埃贝普双品牌-海外社媒推广要点》定稿，清理删除 3 份旧版本。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>4. 语音转文字能力配置完成（本机免费）</span>
+          <span class="tag tag-purple">能力</span>
+        </div>
+        <ul class="task-desc">
+          <li>桌面版为密封打包装不进官方语音组件，绕道在本地工具区安装 faster-whisper 并下载中文语音模型（461MB）。</li>
+          <li>实测加载与转写管道验证通过——以后发录音/会议音频即可转文字稿，全程本机处理、免费。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>5. 长会话断线故障救援</span>
+          <span class="tag tag-orange">系统</span>
+        </div>
+        <ul class="task-desc">
+          <li>某对话积累 24 万 token 超服务器限制导致断线，先全量备份（1.25MB），再安全瘦身旧消息（488→63 条）并重启恢复。</li>
+          <li>已确认机制：数据库全量留档，压缩只是给模型换摘要——瘦身后该对话恢复可用，后续自动小步压缩不再断线。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>6. 《国外社媒客户销售话术手册》优化版</span>
+          <span class="tag tag-green">外贸</span>
+        </div>
+        <ul class="task-desc">
+          <li>英文话术全部收进"左蓝右灰"两列表格，复制只框英文，灰色中文不再误发给客户。</li>
+          <li>新增"发帖引流弹药库"（4 个成品帖子模板 + 短视频钩子 + 5 平台打法 + 账号安全）、对外口径核对表、DDP 门到门话术，报价承诺放宽至 24 小时，问答库扩至 14 问。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>7. 《国外社媒主动找客户手册》新编</span>
+          <span class="tag tag-green">外贸</span>
+        </div>
+        <ul class="task-desc">
+          <li>按"找对人 → 说对话 → 别踩坑"组织：4 类目标买家画像（进口商/分销商/连锁维修/电商卖家）、平台分工（LinkedIn/Facebook 主攻、IG 挖同行粉丝池）、首次开口话术与避坑清单。</li>
+          <li>两份手册均存档 D 盘重要文件，桌面留存快捷打开版。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>8. C 盘空间清理盘点（扫描完成）</span>
+          <span class="tag tag-orange">系统</span>
+        </div>
+        <ul class="task-desc">
+          <li>扫描结果：C 盘剩 22.9GB，可清理约 2-3GB 分两批——安全垃圾批（临时文件/缓存/缩略图，约 0.5-0.8GB，可直接清）与待拍板批（安装包、WPS/钉钉/微信等缓存合计约 5GB+，需确认哪些不用再清）。</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">二、推进中 · 待拍板</div>
+    <ul class="task-list">
+      <li class="task-item">
+        <div class="task-header">
+          <span>1. C 盘清理执行</span>
+          <span class="tag tag-orange">系统</span>
+        </div>
+        <ul class="task-desc">
+          <li>安全垃圾批可随时开清；大额批（约 5GB+）等你确认：下载安装包/WPS 缓存/钉钉/Kimi/微信企微缓存/浏览器缓存，哪些不用了再动手。</li>
+        </ul>
+      </li>
+      <li class="task-item">
+        <div class="task-header">
+          <span>2. 助手"看图/看视频"待服务器加装视觉模型</span>
+          <span class="tag tag-purple">能力</span>
+        </div>
+        <ul class="task-desc">
+          <li>公司 AI 服务器目前只有 3 个文本模型（DeepSeek 系），无视觉模型；需管理员加装（如 qwen 视觉版）后助手才能直接看懂产品图/视频画面。</li>
+          <li>当前替代：图片中的文字可随时读出（OCR，已具备）；可整理一句大白话转老孟/IT。</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">三、明日计划</div>
+    <ul class="bullet-list">
+      <li><b>1. C 盘清理执行</b>：按今天拍板的清单清理（安全批 + 确认后的大额批），释放磁盘空间。</li>
+      <li><b>2. 视觉模型需求传达</b>：整理一句话给管理员/老孟，推进助手"看图"能力（或保持 OCR 替代方案）。</li>
+      <li><b>3. 日报流程固化</b>：每日日报按"岚松手机版式 + 网址版短链"自动产出并直发企微"文件传输助手"。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span>数据来源：当日 3 个对话窗口执行记录自动汇总（不含聊天原文）</span>
+    <span>记录：Hermes · 王其伟</span>
+  </div>
+</div>
+
+</body>
+</html>
