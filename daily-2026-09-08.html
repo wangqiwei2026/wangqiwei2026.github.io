@@ -183,7 +183,7 @@
 
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="num">9</div>
+      <div class="num">6</div>
       <div class="label">今日完成事项</div>
     </div>
     <div class="stat-card">
@@ -217,28 +217,20 @@
           <li>检查数据库无"肥胖"会话需修剪；顺带定位 sessions 目录积压 22MB 9月4日遗留故障诊断文件（纯日志，不影响功能），清理待确认。</li>
         </ul>
       </li>
+
       <li class="task-item">
         <div class="task-header">
-          <span>3. GitHub 日报永久站上线</span>
-          <span class="tag tag-green">网页</span>
-        </div>
-        <ul class="task-desc">
-          <li>GitHub 账号（wangqiwei2026，163 邮箱）创建 Pages 仓库并发布日报，永久网址 https://wangqiwei2026.github.io 实测上线（200 验证）；电脑关机也能开，账号信息存档 D:\重要文件\GitHub账号信息.txt。</li>
-        </ul>
-      </li>
-      <li class="task-item">
-        <div class="task-header">
-          <span>4. 手机打开日报链接受阻——根因查清</span>
+          <span>3. 手机打开日报链接受阻——根因查清</span>
           <span class="tag tag-blue">日报</span>
         </div>
         <ul class="task-desc">
           <li>逐项实测 github.io、raw.githack、statically/jsDelivr 等境外网页方案：微信/企微内置浏览器拦截境外域名（github.io 直接打不开、netlify.app 打开有提醒），部分 CDN 还把网页当纯文本返回（满屏源码）；飞书"分享/转发"按钮会给链接套 applink.feishu.cn 跳转壳，转发后点开被拦。</li>
-          <li>结论：免费境外网页链接在微信/企微里直开受限是平台规则；可靠交付路径 = ① 网页链接走 Cloudflare 隧道格式（见第 7 条）② 手机存档看 Word 文件发飞书。</li>
+          <li>结论：免费境外网页链接在微信/企微里直开受限是平台规则；可靠交付路径 = ① 网页链接走 Cloudflare 隧道格式 ② 手机存档看 Word 文件发飞书。</li>
         </ul>
       </li>
       <li class="task-item">
         <div class="task-header">
-          <span>5. Netlify 云端永久站上线（日报双通道）</span>
+          <span>4. Netlify 云端永久站上线（日报双通道）</span>
           <span class="tag tag-green">网页</span>
         </div>
         <ul class="task-desc">
@@ -247,28 +239,10 @@
           <li>效果：日报永久站双通道（github.io + netlify.app），以后推送一次自动双更新。</li>
         </ul>
       </li>
+
       <li class="task-item">
         <div class="task-header">
-          <span>6. 今日（9-8）日报生成与多渠道交付</span>
-          <span class="tag tag-blue">日报</span>
-        </div>
-        <ul class="task-desc">
-          <li>生成 9-8 日报 HTML 版（本文件），按 daily-2026-09-08.html 格式挂载；GitHub 永久站 + Netlify 云端双站同步，首页恒为最新一天。</li>
-          <li>同步生成 Word 版并发飞书私聊成功（API code=0）——手机飞书点开即看、永久保留、与电脑开关机无关。</li>
-        </ul>
-      </li>
-      <li class="task-item">
-        <div class="task-header">
-          <span>7. 9-7 隧道格式的今日日报公网链接（已生成交付）</span>
-          <span class="tag tag-blue">日报</span>
-        </div>
-        <ul class="task-desc">
-          <li>按 9-7 定稿格式（隧道网址 + /daily-日期.html）为今日日报生成公网链接并实测可开（HTTP 200），链接已交付手机查收——复制粘贴到企微/微信发送可直达、不跳转。</li>
-        </ul>
-      </li>
-      <li class="task-item">
-        <div class="task-header">
-          <span>8. 老板驾驶舱 V2 全新搭建</span>
+          <span>5. 老板驾驶舱 V2 全新搭建</span>
           <span class="tag tag-orange">系统</span>
         </div>
         <ul class="task-desc">
@@ -278,7 +252,7 @@
       </li>
       <li class="task-item">
         <div class="task-header">
-          <span>9. 配合社媒同事完成推广资料完善</span>
+          <span>6. 配合社媒同事完成推广资料完善</span>
           <span class="tag tag-purple">外贸</span>
         </div>
         <ul class="task-desc">
